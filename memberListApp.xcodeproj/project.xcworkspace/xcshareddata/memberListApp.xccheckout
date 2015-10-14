@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F11DF35B-863F-4077-8801-78CA4D417FDF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>memberListApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BAE357251BC3E27E4D2BDF5B558011260E5DFD22</key>
+		<string>github.com:hitcracker317/MembarInformationApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>memberListApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BAE357251BC3E27E4D2BDF5B558011260E5DFD22</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:hitcracker317/MembarInformationApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BAE357251BC3E27E4D2BDF5B558011260E5DFD22</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BAE357251BC3E27E4D2BDF5B558011260E5DFD22</string>
+			<key>IDESourceControlWCCName</key>
+			<string>memberListApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
