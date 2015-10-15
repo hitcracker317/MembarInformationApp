@@ -9,13 +9,14 @@
 import UIKit
 
 class MemberInfoModel: NSObject {
-    var imageString:String
-    var nameString:String
-    var detailString:String
     
+    var imageString : String?
+    var nameString : String?
+    var detailString : String?
+        
     init(image:String,name:String,detail:String){
-        self.imageString = image
-        self.nameString = name
-        self.detailString = detail
+        imageString = image
+        nameString = name
+        detailString = detail
     }
 }
