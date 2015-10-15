@@ -19,6 +19,8 @@
 		DCBF0F0C1BCEAF2300BDC0EF /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCBF0F091BCEAF2300BDC0EF /* image3.jpg */; };
 		DCBF0F511BD0118F00BDC0EF /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF0F4F1BD0118F00BDC0EF /* MemberTableViewCell.swift */; };
 		DCBF0F521BD0118F00BDC0EF /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBF0F501BD0118F00BDC0EF /* MemberTableViewCell.xib */; };
+		DCBF0F551BD0239900BDC0EF /* MemberTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF0F531BD0239900BDC0EF /* MemberTableViewCell2.swift */; };
+		DCBF0F561BD0239900BDC0EF /* MemberTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBF0F541BD0239900BDC0EF /* MemberTableViewCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		DCBF0F091BCEAF2300BDC0EF /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image3.jpg; path = "../../セブ_iOS研修/week2/week2_day3_step3/week2_day3_step3/images/image3.jpg"; sourceTree = "<group>"; };
 		DCBF0F4F1BD0118F00BDC0EF /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		DCBF0F501BD0118F00BDC0EF /* MemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
+		DCBF0F531BD0239900BDC0EF /* MemberTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell2.swift; sourceTree = "<group>"; };
+		DCBF0F541BD0239900BDC0EF /* MemberTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberTableViewCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 			children = (
 				DCBF0F4F1BD0118F00BDC0EF /* MemberTableViewCell.swift */,
 				DCBF0F501BD0118F00BDC0EF /* MemberTableViewCell.xib */,
+				DCBF0F531BD0239900BDC0EF /* MemberTableViewCell2.swift */,
+				DCBF0F541BD0239900BDC0EF /* MemberTableViewCell2.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				DC9E540F1BCE558C00434A46 /* Images.xcassets in Resources */,
 				DCBF0F0A1BCEAF2300BDC0EF /* image1.jpg in Resources */,
 				DCBF0F0B1BCEAF2300BDC0EF /* image2.jpg in Resources */,
+				DCBF0F561BD0239900BDC0EF /* MemberTableViewCell2.xib in Resources */,
 				DCBF0F0C1BCEAF2300BDC0EF /* image3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +277,7 @@
 				DCBF0F051BCEAAAF00BDC0EF /* MemberInfoModel.swift in Sources */,
 				DC9E54281BCE577700434A46 /* TopViewController.swift in Sources */,
 				DC9E54081BCE558C00434A46 /* AppDelegate.swift in Sources */,
+				DCBF0F551BD0239900BDC0EF /* MemberTableViewCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
