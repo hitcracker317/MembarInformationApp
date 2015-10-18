@@ -43,8 +43,8 @@
 		DC9E54171BCE558C00434A46 /* memberListAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memberListAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9E541C1BCE558C00434A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9E541D1BCE558C00434A46 /* memberListAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberListAppTests.swift; sourceTree = "<group>"; };
-		DC9E54271BCE577700434A46 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopViewController.swift; path = ../../TopViewController.swift; sourceTree = "<group>"; };
-		DCBF0F041BCEAAAF00BDC0EF /* MemberInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberInfoModel.swift; path = ../MemberInfoModel.swift; sourceTree = "<group>"; };
+		DC9E54271BCE577700434A46 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		DCBF0F041BCEAAAF00BDC0EF /* MemberInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberInfoModel.swift; sourceTree = "<group>"; };
 		DCBF0F071BCEAF2300BDC0EF /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpg; path = "../../セブ_iOS研修/week2/week2_day3_step3/week2_day3_step3/images/image1.jpg"; sourceTree = "<group>"; };
 		DCBF0F081BCEAF2300BDC0EF /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpg; path = "../../セブ_iOS研修/week2/week2_day3_step3/week2_day3_step3/images/image2.jpg"; sourceTree = "<group>"; };
 		DCBF0F091BCEAF2300BDC0EF /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image3.jpg; path = "../../セブ_iOS研修/week2/week2_day3_step3/week2_day3_step3/images/image3.jpg"; sourceTree = "<group>"; };
