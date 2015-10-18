@@ -158,9 +158,13 @@
                                     <segue destination="XHy-aK-YHp" kind="unwind" unwindAction="returnMenu:" id="hKs-rp-en8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7F-No-uDH">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7F-No-uDH">
                                 <rect key="frame" x="82" y="54" width="210" height="210"/>
                                 <color key="backgroundColor" red="1" green="0.89614848899999999" blue="0.88091891759999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z3L-vp-NcI" appends="YES" id="wwC-9M-SK1"/>
+                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-et-8W0">
                                 <rect key="frame" x="52" y="385" width="270" height="189"/>
@@ -169,11 +173,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-s6-1zP">
-                                <rect key="frame" x="82" y="286" width="210" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-89-Gth">
                                 <rect key="frame" x="82" y="341" width="210" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -187,17 +186,34 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveButton:" destination="6vc-L7-hBy" eventType="touchUpInside" id="xjy-TP-LUf"/>
                                     <segue destination="i1P-KV-Uac" kind="unwind" unwindAction="returnMenu:" id="82X-79-vcd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-s6-1zP">
+                                <rect key="frame" x="82" y="286" width="210" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="7Zs-89-Gth" id="jGe-7u-zrk"/>
+                        <outlet property="detailTextView" destination="M0G-et-8W0" id="Ley-9E-7vB"/>
+                        <outlet property="nameTextField" destination="xrn-s6-1zP" id="Ijk-0H-AyL"/>
+                        <outlet property="thumbnailImageView" destination="c7F-No-uDH" id="R0t-gJ-PBH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="642-di-B8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XHy-aK-YHp" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Z3L-vp-NcI">
+                    <connections>
+                        <action selector="changeImage:" destination="6vc-L7-hBy" id="APC-I5-j7C"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1643.5" y="-335.5"/>
         </scene>
