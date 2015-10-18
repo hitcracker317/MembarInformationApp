@@ -13,9 +13,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Oc-rU-EcU">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Oc-rU-EcU">
                         <rect key="frame" x="10" y="10" width="80" height="80"/>
-                        <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-sn-kVc">
                         <rect key="frame" x="107" y="44" width="250" height="21"/>
@@ -25,6 +24,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="memberNameLabel" destination="LD2-sn-kVc" id="0xb-3P-d6a"/>
+                <outlet property="thumbnailImageView" destination="5Oc-rU-EcU" id="H01-V1-DgW"/>
+            </connections>
             <point key="canvasLocation" x="343.5" y="289"/>
         </tableViewCell>
     </objects>

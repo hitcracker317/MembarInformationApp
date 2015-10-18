@@ -10,8 +10,7 @@ import UIKit
 
 class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
-    var memberArray = []
-    //var addView = AddInfoView()
+    var memberArray:[MemberInfoModel] = [MemberInfoModel]() //モデルクラスを格納する配列
     
     @IBOutlet weak var memberTableView: UITableView!
     
@@ -26,6 +25,15 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         var nib2:UINib = UINib(nibName: "MemberTableViewCell2", bundle: nil)
         self.memberTableView.registerNib(nib2, forCellReuseIdentifier: "Cell2")
         
+        
+        //メンバー情報のオブジェクトを作成して、それらを配列に格納
+        var member1 = MemberInfoModel(image: "image1.jpg", name: "sam", detail: "あああああ", birthday: "1999")
+        var member2 = MemberInfoModel(image: "image2.jpg", name: "ねね", detail: "あああああ", birthday: "1989")
+        var member3 = MemberInfoModel(image: "image3.jpg", name: "あな", detail: "あああああ", birthday: "1949")
+        
+        memberArray.append(member1)
+        memberArray.append(member2)
+        memberArray.append(member3)
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +47,7 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return memberArray.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -58,9 +66,14 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         
         var cell:UITableViewCell = UITableViewCell()
         if(indexPath.row % 2 == 0){
-            cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MemberTableViewCell
+            var cell1 = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MemberTableViewCell
+            cell1.setCellInfo(memberArray[indexPath.row])
+            cell = cell1
+            
         } else {
-            cell = tableView.dequeueReusableCellWithIdentifier("Cell2", forIndexPath: indexPath) as! MemberTableViewCell2
+            var cell2 = tableView.dequeueReusableCellWithIdentifier("Cell2", forIndexPath: indexPath) as! MemberTableViewCell2
+            cell2.setCellInfo(memberArray[indexPath.row])
+            cell = cell2
         }
         return cell
     }

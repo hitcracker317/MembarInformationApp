@@ -13,9 +13,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-yv-jCk">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-yv-jCk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
-                        <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-5k-9Gi">
                         <rect key="frame" x="184" y="133" width="176" height="21"/>
@@ -25,6 +24,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="memberNameLabel" destination="ccD-5k-9Gi" id="K2V-bV-alw"/>
+                <outlet property="thumbnailImageView" destination="eqe-yv-jCk" id="IxW-J4-hFv"/>
+            </connections>
             <point key="canvasLocation" x="343.5" y="256"/>
         </tableViewCell>
     </objects>

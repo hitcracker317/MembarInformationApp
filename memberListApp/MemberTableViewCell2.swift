@@ -10,6 +10,8 @@ import UIKit
 
 class MemberTableViewCell2: UITableViewCell {
 
+    @IBOutlet weak var memberNameLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +23,11 @@ class MemberTableViewCell2: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setCellInfo(memberInfoModel:MemberInfoModel){
+        memberNameLabel.text = memberInfoModel.nameString
+        
+        var imageStr = memberInfoModel.imageString
+        thumbnailImageView.image = UIImage(named: imageStr!)
+
+    }
 }
