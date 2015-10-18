@@ -67,7 +67,7 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        self.performSegueWithIdentifier("toDetail", sender: nil)
     }
     
     @IBAction func addMember(sender: AnyObject) {

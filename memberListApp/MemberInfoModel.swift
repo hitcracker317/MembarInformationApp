@@ -13,10 +13,12 @@ class MemberInfoModel: NSObject {
     var imageString : String?
     var nameString : String?
     var detailString : String?
+    var birthdayString: String?
         
-    init(image:String,name:String,detail:String){
+    init(image:String,name:String,detail:String,birthday:String){
         imageString = image
         nameString = name
         detailString = detail
+        birthdayString = birthday
     }
 }
