@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC03092D1BD34B5400CC9227 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03092C1BD34B5400CC9227 /* detailViewController.swift */; };
+		DC03092F1BD34BB400CC9227 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03092E1BD34BB400CC9227 /* EditViewController.swift */; };
 		DC9E54081BCE558C00434A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9E54071BCE558C00434A46 /* AppDelegate.swift */; };
 		DC9E540D1BCE558C00434A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9E540B1BCE558C00434A46 /* Main.storyboard */; };
 		DC9E540F1BCE558C00434A46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9E540E1BCE558C00434A46 /* Images.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC03092C1BD34B5400CC9227 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		DC03092E1BD34BB400CC9227 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		DC9E54021BCE558C00434A46 /* memberListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memberListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9E54061BCE558C00434A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9E54071BCE558C00434A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				DC9E54271BCE577700434A46 /* TopViewController.swift */,
+				DC03092C1BD34B5400CC9227 /* detailViewController.swift */,
+				DC03092E1BD34BB400CC9227 /* EditViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				DC9E54281BCE577700434A46 /* TopViewController.swift in Sources */,
 				DC9E54081BCE558C00434A46 /* AppDelegate.swift in Sources */,
 				DCBF0F551BD0239900BDC0EF /* MemberTableViewCell2.swift in Sources */,
+				DC03092D1BD34B5400CC9227 /* detailViewController.swift in Sources */,
+				DC03092F1BD34BB400CC9227 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,5 +73,10 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     @IBAction func addMember(sender: AnyObject) {
         println("add!!")
     }
+    
+    //遷移先からこのビューコントローラーに戻るメソッド
+    @IBAction func returnMenu(segue:UIStoryboardSegue){
+        
+    }
 
 }
