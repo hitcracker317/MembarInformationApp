@@ -26,6 +26,7 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         self.memberTableView.registerNib(nib2, forCellReuseIdentifier: "Cell2")
         
         
+        /*
         //メンバー情報のオブジェクトを作成して、それらを配列に格納
         var member1 = MemberInfoModel(image: "image1.jpg", name: "sam", detail: "あああああ", birthday: "1999")
         var member2 = MemberInfoModel(image: "image2.jpg", name: "ねね", detail: "あああああ", birthday: "1989")
@@ -34,6 +35,7 @@ class TopViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         memberArray.append(member1)
         memberArray.append(member2)
         memberArray.append(member3)
+        */
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,26 +8,34 @@
 
 import UIKit
 
-class EditViewController: UIViewController ,UIActionSheetDelegate{
+class EditViewController: UIViewController ,UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextFieldDelegate,UITextViewDelegate{
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var editScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         thumbnailImageView.layer.cornerRadius = thumbnailImageView.frame.size.width/2
+        thumbnailImageView.clipsToBounds = true
         thumbnailImageView.layer.borderWidth = 10
         thumbnailImageView.layer.borderColor = UIColor(red:255/255 , green:241/255 , blue:15/255 , alpha:1 ).CGColor
         thumbnailImageView.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
         
-        //UIImageViewをタップすることでメソッドを実行
-        //let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "changeImage:")
-        //thumbnailImageView.addGestureRecognizer(tapGesture)
+        nameTextField.delegate = self
+        birthdayTextField.delegate = self
+        detailTextView.delegate = self
+        
+        nameTextField.layer.borderColor = UIColor.blackColor().CGColor
+        nameTextField.layer.borderWidth = 1
+        birthdayTextField.layer.borderColor = UIColor.blackColor().CGColor
+        birthdayTextField.layer.borderWidth = 1
+        detailTextView.layer.borderColor = UIColor.blackColor().CGColor
+        detailTextView.layer.borderWidth = 1
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +45,6 @@ class EditViewController: UIViewController ,UIActionSheetDelegate{
     
     @IBAction func changeImage(sender: UITapGestureRecognizer) {
         //アクションシートを開く
-        
         var sheet: UIActionSheet = UIActionSheet()
         let title: String = "Please choose a plan"
         sheet.title  = title
@@ -59,9 +66,23 @@ class EditViewController: UIViewController ,UIActionSheetDelegate{
         switch buttonIndex{
         case 1:
             //カメラを起動
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+                let controller = UIImagePickerController()
+                controller.delegate = self
+                controller.sourceType = UIImagePickerControllerSourceType.Camera
+                self.presentViewController(controller, animated: true, completion: nil)
+            }
             break;
         case 2:
             //カメラロール
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+                let controller = UIImagePickerController()
+                controller.delegate = self
+                controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                self.presentViewController(controller, animated: true, completion: nil)
+            } else {
+                println("エラー")
+            }
             break;
         case 3:
             //写真を削除
@@ -71,6 +92,54 @@ class EditViewController: UIViewController ,UIActionSheetDelegate{
             break;
         }
     }
+    
+    // 写真を選択した時に呼ばれる
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            thumbnailImageView.image = image
+            //println(image)
+        }
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //キーボードのリターンが押された際にキーボードを閉じる
+        nameTextField.resignFirstResponder();
+        nameTextField.text = nameTextField.text;
+        
+        birthdayTextField.resignFirstResponder();
+        birthdayTextField.text = birthdayTextField.text;
+        
+        return true;
+    }
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        println("テキストビュー開いたっすよ")
+        //editScrollView.scrollEnabled = true
+        
+        UIView.animateWithDuration(0.3, animations:
+            {() -> Void in
+                self.editScrollView.contentOffset = CGPointMake(0, 150)
+            },completion:nil
+        );
+        return true
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        UIView.animateWithDuration(0.3, animations:
+            {() -> Void in
+                self.editScrollView.contentOffset = CGPointMake(0, 0)
+            },completion:nil
+        );
+        return true
+    }
+    
+    
+    @IBAction func returnTextView(sender: AnyObject) {
+        self.view.endEditing(true);
+    }
+    
     
     @IBAction func saveButton(sender: AnyObject) {
         //save
